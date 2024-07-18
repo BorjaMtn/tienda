@@ -1,0 +1,19 @@
+.img1, .img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.img2 {
+  clip: rect(0px, 100px, 100px, 0px);
+}
+
+.contendor-img {
+  position: relative;
+  
+  overflow: hidden;
+  border: 1px solid #000;
+}

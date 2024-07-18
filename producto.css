@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+.columna-carousel {
+    padding: 0;
+    padding-right: 12px;
+}
+
+.carousel-item img {
+    height: 600px;
+    border-radius: 20px;
+}
+
+.compra {
+    border: 1px solid black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.compra-datos {
+    border: 2px solid blue;
+    border-radius: 20px;
+    width: 70%;
+    height: 80px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 13%;
+}
+
+.elegir-colores {
+    margin-top: 20px;
+}
+
+.lista-colores {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    & a {
+        text-decoration: none;
+    }
+}
+
+.lista-colores {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.color-opcion {
+    position: relative;
+}
+
+.color-opcion input[type="radio"] {
+    display: none; /* Oculta el input radio real */
+}
+
+.color-opcion label {
+    display: block;
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: 50px; /* Ajusta el tamaño según tus necesidades */
+    border: 1px solid black; /* Añade un borde para ver los límites del label */
+    cursor: pointer; /* Cambia el cursor para indicar que el label es interactivo */
+    border-radius: 50%; /* Hace que los labels sean circulares */
+}
+
+/* Estilos específicos para cada color */
+.color-negro {
+    background-color: grey;
+}
+
+.color-rojo {
+    background-color: rgb(125, 148, 180);
+}
+
+.color-azul {
+    background-color: rgb(34, 181, 161);
+}
+
+/* Estilo para el label seleccionado */
+.color-opcion input[type="radio"]:checked + label {
+    border: 2px solid blue; /* Color del borde cuando el radio button está seleccionado */
+}
+
+
+.opciones {
+    border-radius: 20px;
+    width: 50%;
+    height: 80px;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.primera-opcion:hover {
+    border: 1px solid black;
+}
+
+.segunda-opcion:hover {
+    border: 1px solid black;
+}
+
+.quitar-radio input[type="radio"] {
+    visibility: hidden;
+}
+
+.almacenamiento h5 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+
+.seleccionado {
+    margin: 0;
+    border: 1px solid rgb(170, 170, 170);
+}
+
+label .seleccionado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+input[type="radio"]:checked + .seleccionado {
+    border: 2px solid blue;
+}
+
+
+.myButton {
+    box-shadow: 9px 10px 15px -4px rgba(143, 127, 143, 0.25);
+    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color: #2e466e;
+    border-radius: 17px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 6px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #263666;
+    margin-top: 20px;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+
+    background-color: #415989;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.conocer-mas {
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.4s;
+}
+
+.conocer-mas:hover {
+    color: grey;
+    transform: scale(1.2);
+}
+
+.caracteristicas {
+   
+    margin-top: 20px;
+}
+
+.datos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center ;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.memoria, .pantalla, .face-id {
+    padding-left: 0;
+}
+.camara, .procesador, .bateria {
+    padding-right: 0;
+}
+
+.dato-1 {
+    width: 50%;
+
+    & img {
+        width: 30%;
+        padding: 10px;
+    }
+}
+
+.dato-2 {
+    width: 50%;
+    display: flex;
+    margin: auto;   
+    align-items: center;
+}
+
+
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    
+}
+.faq {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+}
+.faq.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+.faq.visible {
+    max-height: 1000px; /* Ajusta este valor según el contenido */
+    opacity: 1;
+}
+details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.toggle-button {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+/* Estilo para rotar el ícono */
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.flecha {
+    width: 30px;
+        
+}

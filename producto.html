@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="producto.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categoria.html">Telefonos moviles</a></li>
+                            <li><a class="dropdown-item" href="#">Ordenadores</a></li>
+                            <li><a class="dropdown-item" href="#">Televisiones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contactanos</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Iniciar sesion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bag carrito"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-sm main">
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-8 columna-carousel">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/166_1x_shots_so.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/iphone_13-removebg-preview.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/macbook-pro-14.jpg" class="d-block w-100" alt="...">
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4 compra">
+                    <h3>Dispositivo</h3>
+                    <div class="row compra-datos">
+                        <div class="col">Nombre del movil</div>
+                        <div class="col">Desde 1920€</div>
+                    </div>
+                    <div class="elegir-colores">
+                        <h5>Elige tu color</h5>
+                        <ul class="lista-colores">
+                            <li class="color-opcion">
+                                <input type="radio" name="color" id="color-negro" value="negro">
+                                <label for="color-negro" class="color-negro"></label>
+                            </li>
+                            <li class="color-opcion">
+                                <input type="radio" name="color" id="color-rojo" value="rojo">
+                                <label for="color-rojo" class="color-rojo"></label>
+                            </li>
+                            <li class="color-opcion">
+                                <input type="radio" name="color" id="color-azul" value="azul">
+                                <label for="color-azul" class="color-azul"></label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <form action="">
+                        <div class="almacenamiento">
+                            <h5>Almacenamiento</h5>
+                            <label class="opciones quitar-radio" id="opcion1">
+                                <input type="radio" name="opcion" id="opcion1">
+                                <div class="row seleccionado">
+                                    <div class="col">
+                                        ha
+                                    </div>
+                                    <div class="col">
+                                        dad
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="opciones quitar-radio" id="opcion2">
+                                <input type="radio" name="opcion" id="opcion2">
+                                <div class="row seleccionado">
+                                    <div class="col">
+                                        ha
+                                    </div>
+                                    <div class="col">
+                                        dad
+                                    </div>
+                                </div>
+                            </label>
+
+
+                        </div>
+                        <button class="myButton">Comprar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="container text-center">
+            <div class="row row-cols-2 ">
+                <div class="col memoria caracteristicas">
+                    <div class="datos">
+                        <div class="dato-1"><img src="img/usb.png" alt=""></div>
+                        <div class="dato-2">USB-C 3</div>
+                    </div>
+                </div>
+                <div class="col camara caracteristicas">
+                    <div class="datos">
+                        <div class="dato-1"><img src="img/camara-trasera.png" alt=""></div>
+                        <div class="dato-2">Camara</div>
+                    </div>
+                </div>
+                <div class="col pantalla caracteristicas">
+                    <div class="datos">
+                        <div class="dato-1"><img src="img/tocar.png" alt=""></div>
+                        <div class="dato-2">Pantalla</div>
+                    </div>
+                </div>
+                <div class="col procesador caracteristicas">
+                    <div class="datos">
+                        <div class="dato-1"><img src="img/procesador.png" alt=""></div>
+                        <div class="dato-2">Procesador</div>
+                    </div>
+                </div>
+                <div class="col face-id caracteristicas">
+                    <div class="datos">
+                        <div class="dato-1"><img src="img/id-facial.png" alt=""></div>
+                        <div class="dato-2">Face-id</div>
+                    </div>
+                </div>
+                <div class="col bateria caracteristicas">
+                    <div class="datos">
+                        <div class="dato-1"><img src="img/bateria-llena.png" alt=""></div>
+                        <div class="dato-2">Bateria</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center">
+
+            <div>
+
+
+
+                <div class="faq-container">
+                    <h2 class="toggle-button" onclick="toggleAll()">Preguntas Frecuentes <img
+                            src="img/flecha-hacia-abajo-para-navegar.png" alt="" class="flecha rotate"></h2>
+
+                    <div class="faq visible">
+
+                        <details>
+                            <summary>¿Cuál es la política de devoluciones?</summary>
+                            <p>Nuestra política de devoluciones permite devolver productos dentro de los 30 días
+                                posteriores a la compra. Los productos deben estar en su estado original.</p>
+                        </details>
+                        <details>
+                            <summary>¿Cómo puedo rastrear mi pedido?</summary>
+                            <p>Puedes rastrear tu pedido utilizando el número de seguimiento proporcionado en el correo
+                                de confirmación de envío. Visita nuestra página de rastreo y introduce tu número de
+                                seguimiento.</p>
+                        </details>
+                        <details>
+                            <summary>¿Ofrecen envío internacional?</summary>
+                            <p>Sí, ofrecemos envío internacional a muchos países. Los costos y tiempos de envío varían
+                                según la ubicación.</p>
+                        </details>
+                        <details>
+                            <summary>¿Cómo puedo contactar al servicio al cliente?</summary>
+                            <p>Puedes contactar a nuestro servicio al cliente a través de nuestro formulario de contacto
+                                en el sitio web, por correo electrónico a soporte@ejemplo.com, o llamando al
+                                123-456-7890.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script>
+        function toggleAll() {
+            const faq = document.querySelector('.faq');
+            const icon = document.querySelector('.flecha');
+
+            if (faq.classList.contains('visible')) {
+                faq.classList.remove('visible');
+                faq.classList.add('hidden');
+                icon.classList.remove('rotate');
+            } else {
+                faq.classList.remove('hidden');
+                faq.classList.add('visible');
+                icon.classList.add('rotate');
+            }
+        }
+
+    </script>
+
+    <script src="lupa.js"></script>
+</body>
+
+</html>
