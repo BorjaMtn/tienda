@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,29 +33,44 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Ordenadores</a>
           </li>
-          
-          
           <li class="nav-item">
-            <a class="nav-link" href="#">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contactanos</a>
+            <a class="nav-link" href="#">Soporte</a>
           </li>
 
+          <button id="searchButton" class="nav-item nav-link search-button" type="submit"><i class="bi bi-search"></i></button>
+
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-secondary" type="submit">Search</button>
-        </form>
+
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="iniciosesion.html">Iniciar sesion</a></li>
           <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
           <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-          <li class="nav-item"><a class="nav-link"><i class="bi bi-bag "></i></a></li>
+          <li class="nav-item nav-link"><i class="bi bi-bag carrito"></i></li>
         </ul>
       </div>
     </div>
   </nav>
+
+
+<!-- MODAL -->
+  <div id="searchModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <form action="" id="searchForm">
+        <input type="text" placeholder="Buscar..." name="query" autofocus>
+        <button class="boton-buscar" type="submit">Buscar</button>
+      </form>
+      <div class="contenedor-enlaces">
+        <p>Enlaces rapidos</p>
+        <ul class="lista-enlaces">
+          <a href="tienda.html"><li><i class="bi bi-arrow-right"></i> Tienda</li></a>
+          <a href="producto.html"><li><i class="bi bi-arrow-right"></i> Moviles</li></a>
+          <a href=""><li><i class="bi bi-arrow-right"></i> Ordenadores</li></a>
+          <a href=""><li><i class="bi bi-arrow-right"></i> Soporte</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- CARRITO -->
   <div class="carrito-container" id="carritoContainer">
@@ -68,11 +83,9 @@
 
 
 
-
-
   <main class="container-sm main">
     <h1>Lo mejor. <span class="titulo">Echa un vistazo a nuestros productos.</span></h1>
-    <div class="canvas-wrapper">
+    <div class="canvas-wrapper bg-body-tertiary">
       <a href="categoria.html" class="canvas">
         <div class="canvas_border">
           <svg>
@@ -99,7 +112,7 @@
           <span class="canvas_copy_details">Nuevos dispositivos</span>
         </div>
       </a>
-      
+
       <a href="#" class="canvas">
         <div class="canvas_border">
           <svg>
@@ -240,7 +253,7 @@
     <div class="container text-center">
       <div class="row">
         <div class="col">
-          <h3>Links</h3>
+          <h4>Links</h4>
           <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="producto.html">Moviles</a></li>
@@ -250,7 +263,7 @@
           </ul>
         </div>
         <div class="col">
-          <h3>Encuentranos</h3>
+          <h4>Encuentranos</h4>
           <ul class="informacion">
             <li><i class="bi bi-telephone-fill encuentranos"></i> <a href="tel:+94333222111">+94-333-222-111</a></li>
             <li><i class="bi bi-cursor-fill encuentranos"></i> <a href="https://maps.google.com/?q=Calle Prueba, Bilbao"
@@ -260,7 +273,7 @@
           </ul>
         </div>
         <div class="col">
-          <h3>Envianos un mensaje</h3>
+          <h4>Envianos un mensaje</h4>
           <form class="formulario">
             <div class="row mb-3">
               <div class="col-sm-10">
@@ -305,6 +318,7 @@
     </script>
   <script src="slider.js"></script>
   <script src="carrito.js"></script>
+  <script src="buscar.js"></script>
 </body>
 
 </html>

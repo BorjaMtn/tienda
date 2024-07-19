@@ -1,19 +1,93 @@
-.img1, .img2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0;
-  overflow: hidden;
-  display: block;
-}
-
-.img2 {
-  clip: rect(0px, 100px, 100px, 0px);
-}
-
-.contendor-img {
+.outer {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 1px;
+  background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
   position: relative;
-  
-  overflow: hidden;
-  border: 1px solid #000;
+}
+
+.dot {
+  width: 5px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 100px;
+  z-index: 2;
+  right: 10%;
+  top: 10%;
+  animation: moveDot 8s linear infinite;
+}
+
+@keyframes moveDot {
+
+  0%,
+  100% {
+    top: -4px;
+    right: -4px;
+  }
+
+  25% {
+    top: -4px;
+    right: 100%;
+  }
+
+  50% {
+    top: 100%;
+    right: 100%;
+  }
+
+  75% {
+    top: 100%;
+    right: -4px;
+  }
+}
+
+.card {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  border: solid 4px black;
+  background-size: 20px 20px;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(68, 68, 68, 1) 50%, rgba(0, 0, 0, 1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+}
+
+.ray {
+  width: 220px;
+  height: 45px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #c7c7c7;
+  opacity: 0.6;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(10px);
+  transform-origin: 10%;
+  top: 0%;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.card .text {
+  height: 100%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: all .5s ease;
+  }
+}
+
+.imagen:hover {
+  opacity: 1.0;
+  transform: scale(1.05);
 }
