@@ -230,6 +230,31 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .card {
+    display: none;
+}
+.card.show {
+    display: block;
+}
+.pagination {
+    margin-top: 20px;
+}
+.pagination button {
+    margin: 0 5px;
+    
+    
+}
+
+.pagination .arrow {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 10px;
+}
+.pagination .arrow.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.card {
     border: 0;
     border-radius: 20px;
     background: rgb(203,203,203);

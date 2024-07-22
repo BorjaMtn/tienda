@@ -10,6 +10,7 @@
 .columna-carousel {
     padding: 0;
     padding-right: 12px;
+    
 }
 
 .carousel-item img {
@@ -17,12 +18,17 @@
     border-radius: 20px;
 }
 
+
 .compra {
-    border: 1px solid black;
+    border: 1px solid grey;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     padding: 0;
+
+    & h3 {
+        margin-top: 10px;
+    }
 }
 .compra-datos {
     border: 2px solid blue;
@@ -32,6 +38,7 @@
     align-items: center;
     margin-top: 20px;
     margin-left: 13%;
+    background: white;
 }
 
 .elegir-colores {
@@ -66,7 +73,7 @@
     display: block;
     width: 50px; /* Ajusta el tamaño según tus necesidades */
     height: 50px; /* Ajusta el tamaño según tus necesidades */
-    border: 1px solid black; /* Añade un borde para ver los límites del label */
+    border: 1px solid grey; /* Añade un borde para ver los límites del label */
     cursor: pointer; /* Cambia el cursor para indicar que el label es interactivo */
     border-radius: 50%; /* Hace que los labels sean circulares */
 }
@@ -89,7 +96,6 @@
     border: 2px solid blue; /* Color del borde cuando el radio button está seleccionado */
 }
 
-
 .opciones {
     border-radius: 20px;
     width: 50%;
@@ -102,11 +108,11 @@
 }
 
 .primera-opcion:hover {
-    border: 1px solid black;
+    border: 1px solid grey;
 }
 
 .segunda-opcion:hover {
-    border: 1px solid black;
+    border: 1px solid grey;
 }
 
 .quitar-radio input[type="radio"] {
@@ -118,11 +124,10 @@
     margin-bottom: 0;
 }
 
-
-
 .seleccionado {
     margin: 0;
     border: 1px solid rgb(170, 170, 170);
+    background: white;
 }
 
 label .seleccionado {
@@ -193,7 +198,7 @@ input[type="radio"]:checked + .seleccionado {
     display: flex;
     justify-content: center ;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid grey;
     border-radius: 20px;
 }
 

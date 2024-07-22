@@ -44,7 +44,7 @@
   }
 }
 
-.card {
+.carta {
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -76,7 +76,7 @@
   transform: rotate(40deg);
 }
 
-.card .text {
+.carta .text {
   height: 100%;
 
   & img {
@@ -87,7 +87,7 @@
   }
 }
 
-.imagen:hover {
+.carta .text img:hover {
   opacity: 1.0;
   transform: scale(1.05);
 }

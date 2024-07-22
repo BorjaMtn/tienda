@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+#progress {
+    margin-bottom: 20px;
+}
+
+#step-indicator {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#current-step {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+#steps-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: default;
+}
+
+.step-item.completed {
+    background-color: #28a745; /* Verde para pasos completados */
+    color: #fff;
+}
+
+.step-item.active {
+    background-color: #007bff; /* Azul para el paso activo */
+    color: #fff;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.boton-volver {
+    box-shadow: 9px 10px 15px -4px rgba(143, 127, 143, 0.25);
+    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color: #2e466e;
+    border-radius: 17px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 6px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #263666;
+}
+
+.payment-section {
+    display: none; /* Ocultar todas las secciones de pago inicialmente */
+}
+
+.payment-section.active {
+    display: block; /* Mostrar la sección activa */
+}
+
+.boton-volver:hover {
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+  background-color: #415989;
+}
+
+
