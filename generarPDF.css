@@ -1,0 +1,117 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+.order-summary {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Section headings */
+.order-summary h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.summary-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    color: #007bff;
+    margin-top: 15px;
+}
+
+/* Summary list and cost summary */
+.summary-list, .cost-summary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summary-list li, .cost-summary li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cost-summary li {
+    font-weight: bold;
+}
+
+.cost-summary li:last-child {
+    border-bottom: none;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+/* Table styling */
+table img {
+   width: 70px;
+   height: auto;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-items-table thead {
+    background-color: #f4f4f4;
+}
+
+.order-items-table th, .order-items-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.order-items-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.boton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-azul {
+    box-shadow: 9px 10px 15px -4px rgba(143, 127, 143, 0.25);
+    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color: #2e466e;
+    border-radius: 17px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #263666;
+}
+
+.boton-azul:hover {
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    background-color: #415989;
+  }
+
+  

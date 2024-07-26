@@ -18,6 +18,120 @@ h1 {
     text-align: center;
 }
 
+/* TABLA */
+/* General container styling */
+
+
+.order-summary {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Section headings */
+.order-summary h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.summary-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    color: #007bff;
+    margin-top: 15px;
+}
+
+/* Summary list and cost summary */
+.summary-list, .cost-summary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.summary-list li, .cost-summary li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cost-summary li {
+    font-weight: bold;
+}
+
+.cost-summary li:last-child {
+    border-bottom: none;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+/* Table styling */
+table img {
+    width: 100%;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-items-table thead {
+    background-color: #f4f4f4;
+}
+
+.order-items-table th, .order-items-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.order-items-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Button group */
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-azul, .boton-cancelar {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.boton-azul {
+    background-color: #007bff;
+}
+
+.boton-azul:hover {
+    background-color: #0056b3;
+}
+
+.boton-cancelar {
+    background-color: #dc3545;
+}
+
+.boton-cancelar:hover {
+    background-color: #c82333;
+}
+
+.copiar {
+    margin-top: 20px;
+    text-align: center;
+}
+
 #progress {
     margin-bottom: 20px;
 }
@@ -25,6 +139,11 @@ h1 {
 #step-indicator {
     text-align: center;
     margin-bottom: 10px;
+}
+
+.primero {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #current-step {
@@ -38,6 +157,7 @@ h1 {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .step-item {
@@ -45,7 +165,7 @@ h1 {
     text-align: center;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 20px;
     background-color: #e9ecef;
     color: #333;
     cursor: pointer;
@@ -71,6 +191,13 @@ h1 {
     display: block;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior opcional */
+}
+
 .button-group {
     text-align: center;
     margin-top: 20px;
@@ -83,7 +210,8 @@ h1 {
     cursor: pointer;
 }
 
-.boton-volver {
+
+.boton-azul {
     box-shadow: 9px 10px 15px -4px rgba(143, 127, 143, 0.25);
     background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
     background-color: #2e466e;
@@ -99,6 +227,34 @@ h1 {
     text-shadow: 0px 1px 0px #263666;
 }
 
+.boton-azul:hover {
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    background-color: #415989;
+  }
+
+.boton-cancelar {
+    box-shadow: 9px 10px 15px -4px rgba(143, 127, 143, 0.25);
+    background: linear-gradient(to bottom, #ff6f6f 5%, #cc4b4b 100%);
+    background-color: #cc4b4b;
+    border-radius: 17px;
+    border: 1px solid #993333;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 30px;
+    padding: 6px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #660000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton-cancelar:hover {
+    background: linear-gradient(to bottom, #cc4b4b 5%, #ff6f6f 100%);
+    background-color: #ff6f6f;
+}
+
 .payment-section {
     display: none; /* Ocultar todas las secciones de pago inicialmente */
 }
@@ -107,9 +263,385 @@ h1 {
     display: block; /* Mostrar la sección activa */
 }
 
+/* Estilo general del formulario */
+#payment-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para etiquetas y campos de entrada */
+#payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+#payment-form input, #payment-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+#payment-form input::placeholder {
+    color: #aaa;
+}
+
+/* Estilo para secciones de pago */
+.payment-section {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.payment-section h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Contenedor para las filas del formulario */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre los grupos de formulario */
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada grupo de formulario dentro de la fila */
+.form-group {
+    flex: 1; /* Ocupa todo el ancho disponible dentro de la fila */
+    min-width: 0; /* Evita que el contenido se desborde */
+}
+
+/* Asegúrate de que las etiquetas y campos de entrada ocupen el 100% del ancho de su contenedor */
+.form-group label, .form-group input {
+    width: 100%;
+}
+
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye el padding y borde en el cálculo del ancho total */
+}
+
+
+/* Estilo para los botones de navegación */
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-group button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.button-group i {
+    margin-right: 5px;
+}
+
+
 .boton-volver:hover {
     background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
   background-color: #415989;
 }
 
+/* General styling for the step container */
+.step {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+/* Styling for the heading */
+.step h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* General styling for form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Styling for form labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Styling for form inputs */
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Styling for the button group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Styling for buttons */
+.button-group button, #add-profile, .modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.button-group button:hover, #add-profile:hover, .modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific styling for the previous button */
+.button-group #prev-to-step-1 {
+    background-color: #6c757d;
+}
+
+.button-group #prev-to-step-1:hover {
+    background-color: #5a6268;
+}
+
+.button-group #prev-to-step-2 {
+    background-color: #6c757d;
+}
+
+.button-group #prev-to-step-2:hover {
+    background-color: #5a6268;
+}
+
+/* Styling for the add profile button */
+#add-profile {
+    display: block;
+    margin: 15px 0;
+    background-color: #28a745;
+}
+
+#add-profile:hover {
+    background-color: #218838;
+}
+
+/* Estilos para la tarjeta */
+
+#edit-form-container h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#edit-details-form .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; /* Espacio alrededor del contenedor */
+    padding-top: 0;
+}
+
+.card {
+    background: #ffffff; /* Fondo blanco para la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px 0; /* Margen vertical para separación */
+    max-width: 250px; /* Ancho máximo para la tarjeta */
+    max-height: 300px;
+    border: 1px solid #ddd; /* Borde sutil */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+    width: calc(50% - 20px); /* Ajusta el ancho para que haya dos tarjetas por fila, considerando el gap */
+    aspect-ratio: 1; /* Mantiene la proporción cuadrada */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumento de la sombra en hover */
+}
+
+.card-title {
+    font-size: 1.2em; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Espaciado debajo del título */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+}
+
+.card-list {
+    list-style: none; /* Quitar viñetas */
+    padding: 0; /* Eliminar espaciado interno */
+    margin: 0; /* Eliminar margen */
+}
+
+.card-list li {
+    padding: 8px 0; /* Espaciado interno para cada ítem */
+    border-bottom: 1px solid #eee; /* Línea divisoria entre ítems */
+    color: #555; /* Color del texto */
+}
+
+.card-list li:last-child {
+    border-bottom: none; /* Eliminar la línea divisoria del último ítem */
+}
+
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the form elements */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Close button styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Style for the form containers */
+#edit-telefono-form-container,
+#edit-envio-form-container,
+#edit-facturacion-form-container {
+    margin-top: 20px;
+}
+
+#edit-telefono-form,
+#edit-envio-form,
+#edit-facturacion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="tel"] {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
