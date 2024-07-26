@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="iniciosesion.css">
+    <link rel="stylesheet" href="/css/iniciosesion.css">
 
 </head>
 
@@ -65,7 +65,7 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col">
-                    <img src="img/_3361c793-3326-4457-bce6-d7d04110f45d.jpg" alt="">
+                    <img src="../img/_3361c793-3326-4457-bce6-d7d04110f45d.jpg" alt="">
                 </div>
 
                 <div class="col">
@@ -118,60 +118,7 @@
         </div>
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    // Obtener elementos del modal
-    const modal = document.getElementById('reset-password-modal');
-    const openModalButton = document.getElementById('open-reset-modal');
-    const closeModalButton = document.getElementById('close-reset-modal');
-    const form = document.getElementById('reset-password-form');
-    const messageDiv = document.getElementById('reset-message');
-
-    // Abrir el modal
-    openModalButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-        modal.style.display = 'block';
-    });
-
-    // Cerrar el modal
-    closeModalButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Cerrar el modal si el usuario hace clic fuera del contenido del modal
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    // Manejar el envío del formulario
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault(); // Evitar el envío del formulario de la manera tradicional
-
-        const email = document.getElementById('reset-email').value;
-
-        try {
-            const response = await fetch('/request-password-reset', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email })
-            });
-
-            const result = await response.json();
-            if (result.success) {
-                messageDiv.textContent = 'Enlace de recuperación enviado. Revisa tu correo electrónico.';
-            } else {
-                messageDiv.textContent = 'No se pudo enviar el enlace de recuperación. Verifica tu dirección de correo electrónico.';
-            }
-        } catch (error) {
-            messageDiv.textContent = 'Ocurrió un error al enviar el enlace de recuperación.';
-        }
-    });
-});
-
+    <script src="../js/recuperar.js">
     </script>
 
 
